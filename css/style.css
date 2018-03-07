@@ -1,0 +1,81 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height:100vh;
+}
+.wrapper {
+	width: 500px;
+	height: 500px;
+	position: relative;/*родитель*/
+	background-color: red;
+}
+.wrapper .block {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;/*наследник отображается относительно родителя/без relative-родителя будет отображаться относительно экрана*/
+	top: 100px;
+	left: 200px;
+}
+.wrapper .block2 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+	position: absolute;/*наследник отображается относительно родителя/без relative-родителя будет отображаться относительно экрана*/
+	right: 10px;
+	bottom: 10px;
+}
+nav {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: pink;
+}
+nav ul {
+	width: 100%;
+	height: 50px;
+	list-style-type: none;
+}
+nav ul li {
+	width: 100px;/*%*/
+	/*display: block;*/
+	float: right;
+	text-align: center;
+	line-height: 50px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: grey;
+	font-size: 20px;
+}
+nav ul li a:hover {
+	border: 2px white solid;
+	color: white;
+	padding: 10px;
+}
+section {
+	width: 100%;
+	height: 100vh;
+}
+.sticky {
+	width:50px;
+	height: 50px;
+	position: sticky;
+	top: 50vh;
+	left: 20vh;
+	background-color: black;
+	z-index: 1;
+}
+#one {
+	background-color: lightgreen;
+}
+#two {
+	background-color: lightblue;
+}
+#three {
+	background-color: darkred;
+}

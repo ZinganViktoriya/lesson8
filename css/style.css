@@ -6,76 +6,52 @@ html {
 	height:100vh;
 }
 .wrapper {
-	width: 500px;
+	width: 100%;
 	height: 500px;
 	position: relative;/*родитель*/
-	background-color: red;
+	background-color: black;
 }
-.wrapper .block {
+.wrapper div {
 	width: 100px;
 	height: 100px;
-	background-color: blue;
-	position: absolute;/*наследник отображается относительно родителя/без relative-родителя будет отображаться относительно экрана*/
+	position: absolute;
+}
+.block1 {
+	background-color: green;
 	top: 100px;
+	left: 100px;
+}
+.block2 {
+	background-color: red;
+	top: 150px;
+	left: 150px;
+}
+.block3 {
+	background-color: blue;
+	top: 200px;
 	left: 200px;
 }
-.wrapper .block2 {
-	width: 100px;
-	height: 100px;
+.block4 {
 	background-color: green;
-	position: absolute;/*наследник отображается относительно родителя/без relative-родителя будет отображаться относительно экрана*/
-	right: 10px;
-	bottom: 10px;
+	right: 100px;
+	bottom: 100px;
 }
-nav {
-	width: 100%;
-	height: 50px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: pink;
+.block5 {
+	background-color: red;
+	right: 150px;
+	bottom: 150px;
 }
-nav ul {
-	width: 100%;
-	height: 50px;
-	list-style-type: none;
+.block6 {
+	background-color: blue;
+	right: 200px;
+	bottom: 200px;
 }
-nav ul li {
-	width: 100px;/*%*/
-	/*display: block;*/
-	float: right;
-	text-align: center;
-	line-height: 50px;
+.wrapper:hover .block1, .wrapper:hover .block2{
+ 	top: 200px;
+	left: 200px;
+	transition: ease-out 0.5s;
 }
-nav ul li a {
-	text-decoration: none;
-	color: grey;
-	font-size: 20px;
-}
-nav ul li a:hover {
-	border: 2px white solid;
-	color: white;
-	padding: 10px;
-}
-section {
-	width: 100%;
-	height: 100vh;
-}
-.sticky {
-	width:50px;
-	height: 50px;
-	position: sticky;
-	top: 50vh;
-	left: 20vh;
-	background-color: black;
-	z-index: 1;
-}
-#one {
-	background-color: lightgreen;
-}
-#two {
-	background-color: lightblue;
-}
-#three {
-	background-color: darkred;
-}
+.wrapper:hover .block4, .wrapper:hover .block5 {
+ 	right: 200px;
+ 	bottom: 200px;
+	transition: ease-out 0.5s;
